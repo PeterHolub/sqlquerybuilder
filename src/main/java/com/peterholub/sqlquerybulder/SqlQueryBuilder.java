@@ -9,7 +9,8 @@ public class SqlQueryBuilder {
     public static void main(String[] args) {
         SqlQueryBuilder sqlQueryBuilder = new SqlQueryBuilder();
         Set<String> ids = sqlQueryBuilder.
-                csvParserForLogs.parseFile("Discover 2021-04-26T11_30_59.286Z - 2021-04-27T11_30_59.286Z.csv");
+                csvParserForLogs.parseFile("Discover 2021-04-26T19_44_40.110Z - 2021-04-27T19_44_40.110Z.csv");
+        System.out.println("There are " + ids.size() + " product id's");
         String sqlQuery = sqlQueryBuilder.queryBuilder.buildQuery(ids);
         System.out.println(sqlQuery);
     }
